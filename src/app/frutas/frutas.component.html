@@ -1,0 +1,8 @@
+<h2>Listado de Frutas</h2><br>
+<input type="text" name="fruta" placeholder="Ingresa una fruta" [(ngModel)]="frutaNueva" >
+<button (click)="agregar()">Agregar Fruta</button><br><br>
+<button (click)="eliminar()">Eliminar Fruta</button>
+<ul>
+  <li *ngFor="let fruta of frutas">{{fruta}}</li>
+</ul>
+<h3 *ngIf="frutas.length == 0">No hay mas frutas para eliminar</h3>
